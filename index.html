@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+
+    <!--  <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon"> -->
+
+    <title>Tesis periodismo</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--  
+Estructura:
+-El título y la bajada
+ con el video de fondo que este en loop
+
+-Texto introductorio
+
+-Figuritas
+
+-Podcast
+
+-Un video
+
+-Museo virtual
+ que tmb te saque de la pantalla de inicio
+ galería de imágenes vertical que también te las paso luego, con un breve texto abajo.
+
+-Un documental
+
+-Mapa con la infografia
+ -->
+
+    <section id="s_portada">
+        <video autoplay muted loop id="videoBack">
+            <source src="media/videoPortada.mp4" type="video/mp4">
+        </video>
+
+        <div id="gradient"></div>
+
+        <div>
+            <h1 class="titulo" data-aos="fade-up" data-aos-duration="1000">1924:</h1>
+            <h2 class="titulo2" data-aos="fade-up" data-aos-duration="1250">el legado de la primera estrella</h2>
+            <p data-aos="fade-up" data-aos-duration="1500">Este año se conmemora el centenario de la primera estrella
+                celeste; estos son los 22 campeones que
+                pusieron
+                al país en boca del mundo.</p>
+        </div>
+
+    </section>
+
+    <section id="s_introduccion">
+        <p data-aos="fade-up" data-aos-duration="1000">En 1924, la selección uruguaya de fútbol marcó un hito histórico
+            al conquistar su primera estrella en los
+            Juegos Olímpicos de París, convirtiéndose en el primer equipo sudamericano en ganar un torneo internacional
+            de esta magnitud. Con un juego que deslumbró a Europa, Uruguay presentó un estilo de fútbol técnico, veloz y
+            estratégico, que rompió con el juego físico dominante en la época. Esta victoria no solo elevó al país en el
+            panorama mundial del deporte, sino que también estableció las bases de la rica tradición futbolística
+            uruguaya, dando inicio a la leyenda de la "Garra Charrúa".</p>
+    </section>
+
+    <section id="s_jugadores">
+        <h1 data-aos="flip-left" data-aos-duration="1000">Jugadores</h1>
+
+        <a href="detalleJugador.html?nro=1" data-aos="fade-up"><img src="media/figuritas/1.png"></a>
+        <a href="detalleJugador.html?nro=2" data-aos="fade-up"><img src="media/figuritas/2.png"></a>
+        <a href="detalleJugador.html?nro=3" data-aos="fade-up"><img src="media/figuritas/3.png"></a>
+        <a href="detalleJugador.html?nro=4" data-aos="fade-up"><img src="media/figuritas/4.png"></a>
+        <a href="detalleJugador.html?nro=5" data-aos="fade-up"><img src="media/figuritas/5.png"></a>
+        <a href="detalleJugador.html?nro=6" data-aos="fade-up"><img src="media/figuritas/6.png"></a>
+        <a href="detalleJugador.html?nro=7" data-aos="fade-up"><img src="media/figuritas/7.png"></a>
+        <a href="detalleJugador.html?nro=8" data-aos="fade-up"><img src="media/figuritas/8.png"></a>
+        <a href="detalleJugador.html?nro=9" data-aos="fade-up"><img src="media/figuritas/9.png"></a>
+        <a href="detalleJugador.html?nro=10" data-aos="fade-up"><img src="media/figuritas/10.png"></a>
+        <a href="detalleJugador.html?nro=11" data-aos="fade-up"><img src="media/figuritas/11.png"></a>
+        <a href="detalleJugador.html?nro=12" data-aos="fade-up"><img src="media/figuritas/12.png"></a>
+        <a href="detalleJugador.html?nro=13" data-aos="fade-up"><img src="media/figuritas/13.png"></a>
+        <a href="detalleJugador.html?nro=14" data-aos="fade-up"><img src="media/figuritas/14.png"></a>
+        <a href="detalleJugador.html?nro=15" data-aos="fade-up"><img src="media/figuritas/15.png"></a>
+        <a href="detalleJugador.html?nro=16" data-aos="fade-up"><img src="media/figuritas/16.png"></a>
+        <a href="detalleJugador.html?nro=17" data-aos="fade-up"><img src="media/figuritas/17.png"></a>
+        <a href="detalleJugador.html?nro=18" data-aos="fade-up"><img src="media/figuritas/18.png"></a>
+        <a href="detalleJugador.html?nro=19" data-aos="fade-up"><img src="media/figuritas/19.png"></a>
+        <a href="detalleJugador.html?nro=20" data-aos="fade-up"><img src="media/figuritas/20.png"></a>
+        <a href="detalleJugador.html?nro=21" data-aos="fade-up"><img src="media/figuritas/21.png"></a>
+
+    </section>
+
+    <section id="s_podcast">
+        <h1 data-aos="flip-left" data-aos-duration="1000">Podcast</h1>
+
+        <div id="podcast_timeline">
+            <div class="timeline_inner">
+                <!-- display flex
+                 direction vertical
+                 6em gap
+        
+                -->
+                <div class="timeline_grid-wrap">
+                    <!-- position relative -->
+
+                    <div class="timeline_progress">
+                        <!--we animate the height-->
+
+
+                        <div class="timeline_dot">
+                            <!-- width + height 24px 
+                         por relative
+                         z-index 1
+    
+                        -->
+                        </div>
+                        <div class="timeline_overlay-top">
+                            <!-- gradient -->
+                        </div>
+                    </div>
+
+                    <div class="timeline_grid">
+
+                        <div class="timeline_item-wrap hidden-item">
+                        </div>
+
+                        <div class="timeline_track-wrap">
+                            <div class="timeline_track">
+                            </div>
+                        </div>
+
+                        <div class="timeline_item-wrap">
+                            <div class="timeline_item">
+                                <iframe style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/episode/6ijOvj06DL3dVJmh1HkVro?utm_source=generator&theme=0"
+                                    width="100%" height="352" frameBorder="0" allowfullscreen=""
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                            </div>
+                        </div>
+
+                        <div class="timeline_item-wrap item-adjust1">
+                            <iframe style="border-radius:12px"
+                                src="https://open.spotify.com/embed/episode/6ijOvj06DL3dVJmh1HkVro?utm_source=generator&theme=0"
+                                width="100%" height="352" frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"></iframe>
+                        </div>
+                        <div class="timeline_track-wrap">
+                            <div class="timeline_track">
+                            </div>
+                        </div>
+                        <div class="timeline_item-wrap hidden-item"></div>
+
+                        <div class="timeline_item-wrap hidden-item"></div>
+                        <div class="timeline_track-wrap">
+                            <div class="timeline_track">
+                            </div>
+                            <div class="timeline_overlay-bottom">
+                                <!-- gradient 
+                                 pos absolute
+                                 bottom 0
+                                 -->
+                            </div>
+                        </div>
+                        <div class="timeline_item-wrap">
+                            <iframe style="border-radius:12px"
+                                src="https://open.spotify.com/embed/episode/6ijOvj06DL3dVJmh1HkVro?utm_source=generator&theme=0"
+                                width="100%" height="352" frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"></iframe>
+                        </div>
+
+                        <!-- hide unused item wrap on mobile -->
+
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <section id="s_video">
+        <h1 data-aos="flip-left" data-aos-duration="1000">Video</h1>
+        <iframe data-aos="fade-up" width="100%" height="315"
+            src="https://www.youtube.com/embed/zRDp_Up3igc?si=OzO-9vlStIVB-GS-" title="YouTube video player"
+            frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div>
+            <h2 data-aos="fade-up">Título de video</h2>
+            <p data-aos="fade-up">Descripción de video</p>
+        </div>
+    </section>
+
+    <a href="galeria.html">
+        <section id="s_galeria">
+
+            <h1 data-aos="flip-left" data-aos-duration="1000">Galería</h1>
+        </section>
+    </a>
+
+    <section id="s_documental">
+        <h1 data-aos="flip-left" data-aos-duration="1000">Documental</h1>
+        <iframe data-aos="fade-up" width="100%" height="315"
+            src="https://www.youtube.com/embed/zRDp_Up3igc?si=OzO-9vlStIVB-GS-" title="YouTube video player"
+            frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div>
+            <h2 data-aos="fade-up">Título de documental</h2>
+            <p data-aos="fade-up">Descripción de documental</p>
+        </div>
+    </section>
+
+    <section id="s_infografia">
+        <h1 data-aos="flip-left" data-aos-duration="1000">Infografía</h1>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+
+</html>

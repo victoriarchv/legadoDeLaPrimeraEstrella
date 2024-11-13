@@ -1,0 +1,342 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Slab", serif;
+  color: #fffffa;
+  transition: 800ms cubic-bezier(0.33, 1, 0.68, 1) 0s;
+}
+
+body {
+  background-color: #02377b;
+}
+
+h1,
+h2 {
+  font-family: "Bebas Neue", sans-serif;
+  text-align: center;
+  width: 100%;
+}
+
+h2 {
+  text-align: left;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 1.5vh;
+}
+
+p {
+  font-size: 1em;
+  line-height: 120%;
+}
+
+section {
+  padding: 3vh 2vh;
+  z-index: 5;
+  position: relative;
+  background-color: #02377b;
+}
+
+.titulo {
+  font-size: 6em;
+  line-height: 90%;
+  margin: 0;
+}
+
+.titulo2 {
+  font-size: 3.5em;
+  line-height: 90%;
+  text-align: center;
+}
+
+#s_portada {
+  padding: 0;
+  min-height: 100vh;
+}
+#s_portada video {
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: fixed;
+  top: 0;
+}
+#s_portada #gradient {
+  z-index: 3;
+  position: absolute;
+  width: 100vw;
+  height: 100.5vh;
+  background: linear-gradient(rgba(0, 0, 0, 0) 50%, rgb(2, 55, 123) 100%);
+}
+#s_portada div {
+  z-index: 3;
+  position: absolute;
+  padding: 2vh;
+  padding-top: 25vh;
+  text-shadow: 1px 3px 10px rgba(0, 0, 0, 0.1921568627);
+}
+#s_portada div p {
+  text-shadow: 1px 2px 10px #000000;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  section {
+    padding: 3vh 20vw;
+  }
+  #s_portada div {
+    padding-top: 30vh;
+    width: 100%;
+  }
+  #s_portada div p {
+    width: 530px;
+    margin: 0 auto;
+  }
+}
+#s_introduccion {
+  min-height: 100vh;
+  padding-top: 30vh;
+}
+#s_introduccion p {
+  max-width: 605px;
+  margin: 0 auto;
+}
+
+#s_jugadores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5vh;
+  justify-content: center;
+  background: url(media/paperBackground.png) no-repeat;
+  background-position: right;
+  background-size: cover;
+  padding: 5vh 2vh;
+}
+#s_jugadores a {
+  display: block;
+  width: calc(50% - 1.5vh);
+}
+#s_jugadores img {
+  width: 100%;
+  box-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.4941176471);
+}
+
+@media screen and (min-width: 768px) {
+  #s_jugadores {
+    gap: 1.5vh;
+    background-position: center;
+    background-size: 100% 100%;
+    padding: 10vh 20vw;
+  }
+  #s_jugadores h1 {
+    text-shadow: 1px 3px 10px rgba(0, 0, 0, 0.1921568627);
+  }
+  #s_jugadores a {
+    display: block;
+    width: calc(25% - 3vh);
+  }
+  #s_jugadores img {
+    width: 100%;
+    box-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.4941176471);
+  }
+}
+#s_podcast h1 {
+  margin-bottom: 0;
+}
+#s_podcast iframe {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4941176471);
+}
+
+.timeline_grid-wrap {
+  position: relative;
+}
+.timeline_grid-wrap .timeline_progress {
+  width: 3px;
+  height: 5%;
+  position: absolute;
+  left: 10%;
+  transform: translateX(-50%);
+  background-color: #ffac5f;
+}
+.timeline_grid-wrap .timeline_progress .timeline_dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50px;
+  border: solid 4px #02377b;
+  background-color: #ffac5f;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+}
+.timeline_grid-wrap .timeline_progress .timeline_overlay-top {
+  width: inherit;
+  height: 20px;
+  background: linear-gradient(rgb(2, 55, 123) 10%, rgba(0, 0, 0, 0) 100%);
+}
+
+.timeline_grid {
+  display: grid;
+  grid-template-columns: 0.25fr 1fr;
+  grid-auto-rows: auto;
+}
+.timeline_grid .hidden-item {
+  display: none;
+}
+.timeline_grid .item-adjust1 {
+  grid-column: 2/3;
+  grid-row: 2;
+}
+.timeline_grid .timeline_track-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.timeline_grid .timeline_track-wrap .timeline_track {
+  width: 2px;
+  height: 100%;
+  background-color: #abd4ed;
+}
+.timeline_grid .timeline_track-wrap .timeline_overlay-bottom {
+  width: 2px;
+  height: 20px;
+  position: relative;
+  bottom: 0;
+  background: linear-gradient(#abd4ed 10%, rgb(2, 55, 123) 90%);
+}
+.timeline_grid .timeline_item-wrap {
+  padding: 2vh;
+  padding-left: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .timeline_grid-wrap .timeline_progress {
+    left: 50%;
+  }
+  .timeline_grid {
+    grid-template-columns: 1fr 0.25fr 1fr;
+    grid-auto-rows: auto;
+  }
+  .timeline_grid .hidden-item {
+    display: block;
+  }
+  .timeline_grid .item-adjust1 {
+    grid-column: 1/2;
+    grid-row: 2;
+  }
+  .timeline_grid .timeline_track-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .timeline_grid .timeline_track-wrap .timeline_track {
+    width: 2px;
+    height: 100%;
+    background-color: #abd4ed;
+  }
+  .timeline_grid .timeline_item-wrap {
+    padding: 2vh;
+  }
+}
+#s_video,
+#s_documental {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1vh;
+  align-content: center;
+  background: linear-gradient(#02377b 0%, #021526 100%);
+}
+#s_video h1,
+#s_documental h1 {
+  margin-bottom: 0;
+}
+#s_video iframe,
+#s_video div,
+#s_documental iframe,
+#s_documental div {
+  width: 100%;
+}
+#s_video div,
+#s_documental div {
+  margin-top: 1vh;
+}
+
+#s_documental {
+  background: linear-gradient(#021526 0%, #02377b 100%);
+}
+
+@media screen and (min-width: 768px) {
+  #s_video,
+  #s_documental {
+    gap: 2vh;
+    justify-content: space-between;
+  }
+  #s_video iframe,
+  #s_documental iframe {
+    width: calc(60% - 2vh);
+  }
+  #s_video div,
+  #s_documental div {
+    width: 40%;
+  }
+}
+a {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  color: #fffffa;
+}
+
+#s_galeria {
+  min-height: 100vh;
+  padding: 0;
+  background-image: url(media/galeriaBack.png);
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* box-shadow: inset 0px 0px 50px #021526; */
+}
+
+#back-btn {
+  width: 40px;
+  height: 40px;
+  background-image: url(media/arrow-left.png);
+  background-size: cover;
+}
+
+#s_detalle {
+  background: none;
+}
+#s_detalle img {
+  display: block;
+  width: 80%;
+  margin: 2vh auto;
+}
+
+@media screen and (min-width: 768px) {
+  #s_detalle {
+    background: none;
+    min-height: 100vh;
+  }
+  #s_detalle div {
+    display: flex;
+    gap: 2vh;
+    margin: 2vh 0;
+  }
+  #s_detalle div h1 {
+    text-align: left;
+  }
+  #s_detalle div img {
+    display: block;
+    width: calc(40% - 1vh);
+    margin: 0;
+  }
+  #s_detalle div span {
+    width: calc(60% - 1vh);
+  }
+}/*# sourceMappingURL=style.css.map */
