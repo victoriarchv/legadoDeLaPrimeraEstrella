@@ -62,6 +62,7 @@ footer p {
 footer p a {
   font-family: inherit;
   color: #02377b;
+  text-decoration: none;
 }
 footer p:hover a {
   color: #ffac5f;
@@ -379,13 +380,6 @@ footer p:hover a {
     width: 40%;
   }
 }
-a {
-  display: block;
-  height: 100%;
-  text-decoration: none;
-  color: #fffffa;
-}
-
 #s_galeria {
   min-height: 100vh;
   padding: 0;
@@ -397,12 +391,23 @@ a {
   flex-direction: column;
   justify-content: center;
 }
+#s_galeria a {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  color: #fffffa;
+}
 
 #back-btn {
   width: 40px;
   height: 40px;
   background-image: url(media/arrow-left.png);
   background-size: cover;
+}
+#back-btn a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 #back-btn:hover {
@@ -418,26 +423,54 @@ a {
   width: 80%;
   margin: 2vh auto;
 }
+#s_detalle ul {
+  list-style-type: none;
+  padding: 0;
+}
+#s_detalle .animarDetalle {
+  opacity: 1;
+  transform: scale(1);
+}
+#s_detalle .animarDetalleOculto {
+  opacity: 0;
+  transform: scale(0.95);
+}
 
 @media screen and (min-width: 768px) {
   #s_detalle {
     min-height: 100vh;
   }
-  #s_detalle div {
+  #s_detalle div.contenedor {
     display: flex;
+    flex-wrap: wrap;
     gap: 2vh;
-    margin: 2vh 0;
+    margin: 2vh auto;
+    max-width: 870px;
+    justify-content: center;
   }
-  #s_detalle div h1 {
+  #s_detalle div.contenedor h1 {
     text-align: left;
   }
-  #s_detalle div img {
+  #s_detalle div.contenedor img {
     display: block;
-    width: calc(40% - 1vh);
+    width: calc(30% - 1vh);
+    height: 100%;
+    aspect-ratio: inherit;
     margin: 0;
   }
-  #s_detalle div span {
+  #s_detalle div.contenedor span {
     width: calc(60% - 1vh);
+  }
+  #s_detalle .detalleJugadorTexto {
+    max-width: 605px;
+    width: 60vw;
+    margin: 5vh auto;
+  }
+  #s_detalle .detalleJugadorTexto h2 {
+    text-align: center;
+  }
+  #s_detalle .detalleJugadorFicha p {
+    max-width: 500px;
   }
 }
 #s_infografia {
@@ -633,7 +666,7 @@ a {
   gap: 2vh;
 }
 #s_about article {
-  width: 32%;
+  width: 25%;
 }
 #s_about article img {
   width: 100%;
@@ -651,4 +684,10 @@ a {
 }
 #s_about article h2 {
   font-size: 1.6em;
+}
+
+@media screen and (max-width: 768px) {
+  #s_about article {
+    width: calc(50% - 2vh);
+  }
 }/*# sourceMappingURL=style.css.map */
