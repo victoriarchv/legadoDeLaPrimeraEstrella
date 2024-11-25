@@ -587,13 +587,13 @@ a {
 }
 
 //PIEZAS
-.piezaAbout{
-    h2{
+.piezaAbout {
+    h2 {
         margin-top: 1.5vh;
         font-size: 2.5em;
     }
 
-    p{
+    p {
         font-size: 1.2em;
     }
 }
@@ -757,6 +757,57 @@ a {
         .item4 {
             grid-column: 1 / 3;
             grid-row: 4 / 5;
+        }
+    }
+}
+
+//ABOUT
+#s_about {
+    h1 {
+        font-size: 2.5em;
+        text-align: center;
+        line-height: 92%;
+        font-weight: 400;
+    }
+
+    p {
+        margin: 2vh 0;
+        font-size: 1em;
+        font-weight: 300;
+        //text-align: justify;
+    }
+
+    div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2vh;
+    }
+
+    article {
+        width: 32%;
+
+        img {
+            width: 100%;
+        }
+
+        h2,
+        p {
+            width: auto;
+            text-align: left;
+            font-size: 1em;
+            font-weight: 300;
+            margin: 1.5vh 0;
+        }
+
+        p {
+            font-style: italic;
+
+        }
+
+
+        h2 {
+            font-size: 1.6em;
         }
     }
 }
