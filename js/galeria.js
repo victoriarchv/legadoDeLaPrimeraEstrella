@@ -2,23 +2,77 @@
 let piezas = [
     {
         id: "pieza1",
-        img1: "example.jfif",
-        img2: "example2.jpg",
-        img3: "example3.jpg",
-        img4: "example4.jpg",
-        nombre: "Nombre",
+        img1: "p1 (1).jpg",
+        img2: "p1 (2).jpg",
+        img3: "p1 (3).jpg",
+        img4: "p1 (4).jpg",
+        nombre: "Medalla aros",
         desc: "Descripción"
     },
-
     {
         id: "pieza2",
-        img1: "example4.jpg",
-        img2: "example2.jpg",
-        img3: "example3.jpg",
-        img4: "example.jfif",
-        nombre: "Nombre",
+        img1: "p2 (1).jpg",
+        img2: "p2 (2).jpg",
+        img3: "p2 (3).jpg",
+        img4: "p2 (4).jpg",
+        nombre: "Medalla inicial",
+        desc: "Descripción"
+    },
+    {
+        id: "pieza3",
+        img1: "p3 (1).jpg",
+        img2: "p3 (2).jpg",
+        img3: "p3 (3).jpg",
+        img4: "p3 (4).jpg",
+        nombre: "Medalla juegos",
+        desc: "Descripción"
+    },
+    {
+        id: "pieza4",
+        img1: "p4 (1).jpg",
+        img2: "p4 (2).jpg",
+        img3: "p4 (3).jpg",
+        img4: "p4 (4).jpg",
+        nombre: "Todos con Pain",
+        desc: "Descripción"
+    },
+    {
+        id: "pieza5",
+        img1: "p5 (1).jpg",
+        img2: "p5 (2).jpg",
+        img3: "p5 (3).jpg",
+        img4: "p5 (4).jpg",
+        nombre: "Medalla aros g",
+        desc: "Descripción"
+    },
+    {
+        id: "pieza6",
+        img1: "p6 (1).jpg",
+        img2: "p6 (2).jpg",
+        img3: "p6 (3).jpg",
+        img4: "p6 (4).jpg",
+        nombre: "nota de prensa",
+        desc: "Descripción"
+    },
+    {
+        id: "pieza7",
+        img1: "p7 (1).jpg",
+        img2: "p7 (2).jpg",
+        img3: "p7 (3).jpg",
+        img4: "p7 (4).jpg",
+        nombre: "plantel campeón",
+        desc: "Descripción"
+    },
+    {
+        id: "pieza8",
+        img1: "p8 (1).jpg",
+        img2: "p8 (2).jpg",
+        img3: "p8 (3).jpg",
+        img4: "p8 (4).jpg",
+        nombre: "diploma",
         desc: "Descripción"
     }
+
 ]
 
 //ELEMENTOS
@@ -32,26 +86,27 @@ piezas.forEach((e) => {
     galeriaContainer.innerHTML += `
     <article class="pieza" id="${e.id}">
                    <div class="piezaGrid">
-                        <div class="piezaGridItem item1">
+                        <div class="piezaGridItem item1 animarDetalle animarDetalleOculto">
                             <img src="media/piezas/${e.img1}" alt="">
                         </div>
-                        <div class="piezaGridItem item2">
+                        <div class="piezaGridItem item2 animarDetalle animarDetalleOculto">
                             <img src="media/piezas/${e.img2}" alt="">
                         </div>
-                        <div class="piezaGridItem item3">
+                        <div class="piezaGridItem item3 animarDetalle animarDetalleOculto">
                             <img src="media/piezas/${e.img3}" alt="">
                         </div>
-                        <div class="piezaGridItem item4">
+                        <div class="piezaGridItem item4 animarDetalle animarDetalleOculto">
                             <img src="media/piezas/${e.img4}" alt="">
                         </div>
                     </div>
                     <div class="piezaAbout">
-                        <h2>${e.nombre}</h2>
-                        <p>${e.desc}</p>
+                        <h2 class="animarDetalle animarDetalleOculto">${e.nombre}</h2>
+                        <p class="animarDetalle animarDetalleOculto">${e.desc}</p>
                     </div>
                 </article>
     `
 })
+
 
 //INTERACCION DE CADA PIEZA
 //get each pieza article
@@ -193,3 +248,29 @@ let prevImg = () => {
     //return src of previous image
     return piezaImgs[piezaImgsIndex].src
 } */
+
+// Configurar el Intersection Observer
+const options = {
+    root: null, // Observa respecto al viewport.
+    rootMargin: "0px", // Sin margen adicional.
+    threshold: 0.3 // 20% del elemento debe estar visible (equivale al 80% del viewport restante).
+};
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // El elemento está visible en el viewport
+            entry.target.classList.remove("animarDetalleOculto");
+        } else {
+            // El elemento está fuera del viewport
+            entry.target.classList.add("animarDetalleOculto");
+        }
+    });
+}, options);
+
+// Seleccionar todos los elementos con la clase 'animarDetalle'
+const elementos = document.querySelectorAll(".animarDetalle");
+
+// Observar cada elemento
+elementos.forEach(elemento => {
+    observer.observe(elemento);
+});
