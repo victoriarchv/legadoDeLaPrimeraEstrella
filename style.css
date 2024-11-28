@@ -357,14 +357,7 @@ footer p:hover a {
 
 #s_documental {
   /*  background: linear-gradient(#021526 0%, #02377b 100%); */
-  background: #fffffa;
-  color: #02377b;
 }
-#s_documental h2,
-#s_documental p {
-  color: #02377b;
-}
-
 @media screen and (min-width: 768px) {
   #s_video,
   #s_documental {
@@ -427,11 +420,13 @@ footer p:hover a {
   list-style-type: none;
   padding: 0;
 }
-#s_detalle .animarDetalle {
+
+.animarDetalle {
   opacity: 1;
   transform: scale(1);
 }
-#s_detalle .animarDetalleOculto {
+
+.animarDetalleOculto {
   opacity: 0;
   transform: scale(0.95);
 }
@@ -504,6 +499,10 @@ footer p:hover a {
     padding: 10vh 20vw;
   }
 }
+#elemGaleria article {
+  margin: 10vh 0;
+}
+
 .piezaAbout h2 {
   margin-top: 1.5vh;
   font-size: 2.5em;
